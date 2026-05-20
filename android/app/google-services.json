@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "850016541611",
+    "firebase_url": "https://nearfix-c1f68-default-rtdb.firebaseio.com",
+    "project_id": "nearfix-c1f68",
+    "storage_bucket": "nearfix-c1f68.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850016541611:android:04d139b80a5e93b2dbd0ee",
+        "android_client_info": {
+          "package_name": "com.example.nearfix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850016541611-ds3o0higeh6ltt3s7kercp8fghll8nn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nearfix",
+            "certificate_hash": "b880ea4355fa957d8257176d29bba892621c3d15"
+          }
+        },
+        {
+          "client_id": "850016541611-p6in7ticsi894sbfjcrqh060a3ml7b5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvDMdh0hgYVTJwlHpN9LKnF1F2cKAdQnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850016541611-p6in7ticsi894sbfjcrqh060a3ml7b5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,52 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "users": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.uid == $uid || root.child('users').child(auth.uid).child('roles').val().contains('admin'))"
+      }
+    },
+    "categories": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('users').child(auth.uid).child('roles').val().contains('admin')"
+    },
+    "providers": {
+      ".read": "auth != null",
+      "$providerId": {
+        ".write": "auth != null && (auth.uid == $providerId || root.child('users').child(auth.uid).child('roles').val().contains('admin'))"
+      }
+    },
+    "services": {
+      ".read": "auth != null",
+      "$serviceId": {
+        ".write": "auth != null"
+      }
+    },
+    "bookings": {
+      ".read": "auth != null",
+      ".indexOn": ["userId", "providerId", "status"],
+      "$bookingId": {
+        ".write": "auth != null"
+      }
+    },
+    "reviews": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["bookingId", "providerId", "userId"]
+    },
+    "notifications": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null"
+      }
+    },
+    "availability": {
+      ".read": "auth != null",
+      "$providerId": {
+        ".write": "auth != null && auth.uid == $providerId"
+      }
+    }
+  }
+}
